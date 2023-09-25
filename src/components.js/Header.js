@@ -51,15 +51,19 @@ const togglemenuhandler=()=>{
                 value={searchquery} onChange={(e)=>setsearchquery(e.target.value)}
                 onFocus={()=>(setshowsuggestions(true))}
                 onBlur={()=>(setshowsuggestions(false))}
+
                  />
 
                 <button className="border p-2 border-gray-400 rounded-r-full">search</button>
                 </div>
 
                 {showsuggestions &&
-                (<div className="absolute px-2 py-2 bg-white w-[34rem] rounded-lg shadow-lg border-gray-400 ">
+                (<div className="absolute px-2 py-2 bg-white w-[34rem] rounded-lg shadow-lg border-gray-400 " >
                   <ul>
                     {suggestions.map((s)=> <li key={s} className="py-2 px-3 shadow-sm hover:bg-gray-100 "> {s} </li>)}
+                    
+                  
+                    
                    
                  </ul>
                 </div>)}

@@ -8,7 +8,7 @@ import { youtubeapi } from "./utils/constant";
 
 const Watchpage = () => {
   const [videos, setvideos] = useState([]);
-  
+
   const [searchParams] = useSearchParams();
   console.log(searchParams.get("v"));
 
@@ -41,8 +41,8 @@ const Watchpage = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></iframe>
-
-        <Subscribe info={videos} />
+      
+       <Subscribe info={videos} ids={searchParams.get("v")} />
 
         <Comments />
       </div>
